@@ -11,7 +11,7 @@ app.use(cors());
 
 app.post('/', async function (req, res) {
 
-    const shopify = new Shopify({
+    const shopify = await new Shopify({
         shopName: req.body.shopName,
         accessToken: req.body.accessToken
     });
