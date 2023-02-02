@@ -36,7 +36,7 @@ app.post('/', async function (req, res) {
 
     await shopify.asset.update(id, {
         key: "assets/product.js",
-        value: "document.addEventListener('DOMContentLoaded', function(event) { document.getElementById('allData').setAttribute('discounts', '" + JSON.stringify(discounts) + "'); console.log('req': " + req.body + ") document.getElementById('allData').setAttribute('products', '" + JSON.stringify(products) + "'); let  cusEve = new CustomEvent('added'); document.dispatchEvent(cusEve); });"
+        value: "document.addEventListener('DOMContentLoaded', function(event) { document.getElementById('allData').setAttribute('discounts', '" + JSON.stringify(discounts) + "'); console.log('req': " + req.body + "); document.getElementById('allData').setAttribute('products', '" + JSON.stringify(products) + "'); let  cusEve = new CustomEvent('added'); document.dispatchEvent(cusEve); });"
     });
 
 
