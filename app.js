@@ -43,3 +43,4 @@ app.get('/', async function (req, res) {
     res.send("hello world");
 });
 app.listen(3000, function () { return console.log("listening on 3000"); });
+module.exports = app;
